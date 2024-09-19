@@ -24,7 +24,7 @@ function App() {
           </p>
         </div>
 
-        <ul className="flex flex-wrap gap-2 justify-center max-w-3xl sm:gap-4 ">
+        <ul className="flex flex-wrap gap-2 justify-center max-w-3xl sm:gap-4 xl:grid xl:grid-cols-5 xl:grid-rows-6">
           {logos.map((Logo) => (
             <li key={Logo.src}>
               <a
