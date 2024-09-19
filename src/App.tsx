@@ -14,7 +14,7 @@ function App() {
           <p className="text-slate-600 sm:text-lg md:text-xl">
             Check the{" "}
             <a
-              className="underline text-black"
+              className="underline text-black hover:no-underline focus:ring-2 focus:ring-offset-2 focus:ring-highlight"
               href="https://www.google.com"
               target="_blank"
             >
@@ -24,13 +24,16 @@ function App() {
           </p>
         </div>
 
-        <ul className="flex flex-wrap gap-2 justify-center max-w-3xl sm:gap-4 xl:grid xl:grid-cols-5 xl:grid-rows-6">
+        <ul className="flex flex-wrap gap-2 justify-center max-w-3xl sm:gap-4 xl:grid xl:grid-cols-5 xl:grid-rows-6 xl:grid-flow-col">
           {logos.map((Logo) => (
-            <li key={Logo.src}>
+            <li
+              key={Logo.src}
+              className={`col-start-${Logo.column} row-start-${Logo.row} `}
+            >
               <a
                 href={Logo.href}
                 target="_blank"
-                className="grid place-items-center size-20 sm:size-24 bg-highlight bg-opacity-[7%] p-4 rounded-[1rem]"
+                className="grid place-items-center size-20 sm:size-24 bg-highlight bg-opacity-[7%] p-4 rounded-[1rem] transition-all duration-150 ease-in-out hover:-rotate-6 hover:bg-opacity-10 focus:ring-highlight focus:outline-none focus:ring-2 focus:ring-offset-2 "
               >
                 <img src={Logo.src} alt={Logo.alt} className="w-16" />
               </a>
