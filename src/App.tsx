@@ -6,12 +6,12 @@ function App() {
   return (
     <>
       <EpicStackLogo className="size-20" />
-      <h1>The Epic Stack</h1>
+      <h1>The <span className="text-highlight">Epic</span> Stack</h1>
       <p>
-        Check the{" "}
+        Check the
         <a href="https://www.google.com" target="_blank">
           Getting Started
-        </a>{" "}
+        </a>
         guide file for how to get your project off the ground!
       </p>
 
