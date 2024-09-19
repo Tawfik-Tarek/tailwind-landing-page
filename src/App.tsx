@@ -1,12 +1,31 @@
-import './App.css'
+import "./App.css";
+import { EpicStackLogo } from "./assets/logos/epic-stack";
+import { logos } from "./assets/logos/logos";
 
 function App() {
-
   return (
-    <div className='bg-red-600 min-h-[100dvh]'>
-      <h1 className='text-white text-3xl'>Hello World</h1>
-    </div>
-  )
+    <>
+      <EpicStackLogo className="size-20" />
+      <h1>The Epic Stack</h1>
+      <p>
+        Check the{" "}
+        <a href="https://www.google.com" target="_blank">
+          Getting Started
+        </a>{" "}
+        guide file for how to get your project off the ground!
+      </p>
+
+      <ul>
+        {logos.map((Logo) => (
+          <li key={Logo.src}>
+            <a href={Logo.href} target="_blank">
+              <img src={Logo.src} alt={Logo.alt} className="w-16" />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 }
 
-export default App
+export default App;
