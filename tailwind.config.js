@@ -14,9 +14,7 @@ export default {
         popines : ["Poppins", "sans-serif"],
       },
       fontSize:{
-        "4xl" : ["2.25rem", "2.5rem"],
         "4.5xl" : ["2.625rem", "1.15rem"],
-        "5xl" : ["1rem", "1rem"],
         "5.5xl" :['3.375rem' , '1rem']
       }
     },
